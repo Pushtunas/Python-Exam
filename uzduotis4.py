@@ -31,13 +31,13 @@ def was_expensive(self):
     grąžins True, kitu atveju - False
     '''
     if self.budget > 100000000:
-        return True
+        return f'{self.title} biudžetas daugiau nei 100k {True}'
     else:
-        return False
+        return f'{self.title} biudžetas daugiau nei 100k {False}'
 
 movie1 = Movie('Gladiator', 'Ridley Scott', 103000000)
 movie2 = Movie('Shutter Island', 'Martin Scorsese', 80000000)
-movie3 = Movie('The Secret Life of Walter Mitty ', 'Ben Stiller', 90000000)
+movie3 = Movie('The Secret Life of Walter Mitty', 'Ben Stiller', 90000000)
 
 print(Movie.__doc__)
 print(was_expensive.__doc__)
