@@ -1,3 +1,6 @@
+import pprint
+import math
+
 # Duotas "users" sąrašas.
 
 # Parašykite dvi funkcijas, kurios:
@@ -12,8 +15,6 @@
 # 2. funkcija "get_users_names" - kaip argumentą priims sąrašą ir duoto sąrašo
 # atveju grąžins sąrašą su visų vartotojų vardais, išrikiuotais abėcėlės tvarka,
 # pvz. ['Alex John', 'Ann Smith', ...].
-
-import math
 
 users = [
 	{'id': '1', 'name': 'John Smith', 'age': 20},
@@ -40,6 +41,20 @@ def get_user_average_age(sarasas):
     vidurkis = math.ceil(sum(metai) / len(metai))
     return (f'Vartotojų amžiaus vidurkis: {vidurkis}')
 
-print(get_user_average_age.__doc__)
+print(get_user_average_age.__doc__) #atspausdina docstring komentarą
 print(get_user_average_age(users))
 
+def get_users_names(sarasas):
+	'''
+	funkcija "get_users_names" - kaip argumentą priims sąrašą ir duoto sąrašo
+	atveju grąžins sąrašą su visų vartotojų vardais, išrikiuotais abėcėlės tvarka
+	'''
+	filtruotas_sarasas = []
+	for elementas in sarasas:
+		filtruotas_sarasas.append(elementas['name'])
+	return sorted(filtruotas_sarasas)
+
+pp = pprint.PrettyPrinter(width=80) #panaudosime pprint
+
+print(get_users_names.__doc__) #atspausdina docstring komentarą
+pp.pprint(get_users_names(users))
