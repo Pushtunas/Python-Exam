@@ -10,7 +10,7 @@ audi = {
     "model": 'A6',
     "year": 2005,
     "color": 'white',
-}
+    }
 
 def get_dict_values(zodynas):
     '''
