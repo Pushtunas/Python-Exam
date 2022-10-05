@@ -25,9 +25,9 @@ def get_dict_values(zodynas):
         sarasas.append(zodynas[reiksme])
     return sarasas
 
-  # jei reiktų atvaizduoti, o ne grąžinti (data prie f-jos iškvietimo nereiktų ir "print")
+  # jei reiktų atvaizduoti, o ne grąžinti (data prie f-jos iškvietimo nereiktų 'print')
   # for reiksme in zodynas:
     # print(zodynas[reiksme])
 
-print(get_dict_values.__doc__)
+print(get_dict_values.__doc__)  #atspausdina docstring komentarą
 print(get_dict_values(audi))
